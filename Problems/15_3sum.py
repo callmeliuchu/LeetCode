@@ -12,6 +12,8 @@ def f(arr,index):
 		swap(arr,i,index)
 
 
+
+
 def f1(n,m,index,arr,res):
 	if len(arr) == m:
 		res.append(arr[:])
@@ -36,7 +38,28 @@ def f2(m,index,inputArr,arr,res):
 
 
 
-res = []
-f2(3, 0,sorted([-1, 0, 1, 2, -1, -4]),[],res)
-for i in range(10):
-	print(res)
+# res = []
+# f2(3, 0,sorted([-1, 0, 1, 2, -1, -4]),[],res)
+# for i in range(10):
+# 	print(res)
+
+
+arr = [2,3,6,7]
+target = 7
+
+
+def f(arr,target,res,ans):
+	if target < 0:
+		return
+	if target == 0:
+		new_arr = sorted(res)
+		if new_arr not in ans:
+			ans.append(new_arr)
+	for val in arr:
+		res.append(val)
+		f(arr,target-val,res,ans)
+		res.pop()
+
+ans = []
+f(arr,target,[],ans)
+print(ans)
