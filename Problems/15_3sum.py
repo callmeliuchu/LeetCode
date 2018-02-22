@@ -60,6 +60,9 @@ def f(arr,target,res,ans):
 		f(arr,target-val,res,ans)
 		res.pop()
 
-ans = []
-f(arr,target,[],ans)
-print(ans)
+# ans = []
+# f(arr,target,[],ans)
+# print(ans)
+
+s = ''.join(sorted('hfasfdhb'))
+print(s)
