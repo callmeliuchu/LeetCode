@@ -48,8 +48,8 @@ def reverseByK(arr,k):
 
 
 arr = [1,2,3,4,5,5,6,7]
-reverseByK(arr,4)
-print(arr)
+head = createLink(arr)
+reverseByK
 # head = createLink(arr)
 # visitLink(head)
 
